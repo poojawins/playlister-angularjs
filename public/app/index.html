@@ -2,18 +2,20 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>My AngularJS PlayLister</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
+    <li><a href="#/artists">Artists</a></li>
+    <li><a href="#/genres">Genres</a></li>
+    <li><a href="#/songs">All Songs</a></li>
   </ul>
-
+  <h1>PlayLister</h1>
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

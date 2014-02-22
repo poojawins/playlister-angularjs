@@ -2,12 +2,10 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('playListerApp', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
+  'playListerApp.filters',
+  'playListerApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
