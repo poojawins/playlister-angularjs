@@ -1,16 +1,16 @@
 'use strict';
 
-var playlistApp = angular.module("playlistApp", []);
+var playListerApp = angular.module("playListerApp", []);
 // in angular controller, when u $http.get( <datasource>),
 // specify the route for the <datasource>
 // then you pass in 'data' into the anonymous  function
 //and set $scope = data
 
 /* Controllers */
-playlistApp.controller("PlaylistCtrl", ["$scope", "$http", "$timeout",
-  function($scope, $http, $timeout){
-    $http.get("/songs").success(function(data){
+playListerApp.controller("PlayListerCtrl", ["$scope", "$http", function($scope, $http){
+    $http.get("/songs/songs.json").success(function(data){
       $scope.songs = data;
     });
+    $scope.orderProp('name');
 }]);
  

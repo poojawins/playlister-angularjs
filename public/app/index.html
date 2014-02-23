@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="playlistApp">
+<html lang="en" ng-app="playListerApp">
 <head>
   <meta charset="utf-8">
   <title>My AngularJS PlayLister</title>
@@ -14,7 +14,8 @@
   <script src="js/directives.js"></script>
 </head>
 
-<body ng-controller="PlaylistCtrl">
+<body ng-controller="PlayListerCtrl">
+  
   <ul class="menu">
     <li><a href="#/artists">Artists</a></li>
     <li><a href="#/genres">Genres</a></li>
@@ -25,8 +26,7 @@
   <div ng-view></div>
   <ul>
     <li ng-repeat="song in songs">
-      <p>Song Info</p>
-      <p>{{song.name}}</p>
+      <h3>{{song.name}}</h3>
       <p>{{song.artist.name}}</p>
       <p>{{song.genre.name}}</p>
     </li>

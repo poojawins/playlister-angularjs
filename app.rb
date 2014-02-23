@@ -1,12 +1,18 @@
 require 'bundler'
 Bundler.require
 require 'sinatra/json'
+require 'json'
 require './lib/playlister.rb'
 require './lib/parser.rb'
 
-module Playlist
+module PlayLister
 class PlayListerApp < Sinatra::Application
-
+  
+  helpers Sinatra::JSON
+  
+  my_parser = Parser.new
+  my_parser.parse_directory
+  
   configure do
     set :root, File.dirname(__FILE__)
     set :public_folder, 'public/app'
@@ -38,7 +44,7 @@ class PlayListerApp < Sinatra::Application
 
   get '/songs' do
     @songs = Song.list
-    @songs.to_json
+    json @songs
   end
 
   # get '/songs/:song' do

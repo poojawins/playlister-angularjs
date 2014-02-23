@@ -1,3 +1,3 @@
 require './app.rb'
 
-run Playlist::PlayListerApp.new
+run PlayLister::PlayListerApp.new

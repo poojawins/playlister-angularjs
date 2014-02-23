@@ -1,3 +1,3 @@
-class PlayLister < ActiveRecord::Model
+# class PlayLister < ActiveRecord::Model
 
-end
+# end
