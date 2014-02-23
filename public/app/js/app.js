@@ -1,13 +1,12 @@
 'use strict';
 
-
+var playlistApp = angular.module("playlistApp", [
+  "ngRoute",
+  "playlistControllers"
+  ]);
 // Declare app level module which depends on filters, and services
-angular.module('playlistApp', [
-  'ngRoute',
-  'playlistApp.filters',
-  'playlistApp.controllers'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/playlist.html', controller: 'PlaylistCtrl'});
-  $routeProvider.otherwise({redirectTo: '/'});
+
+playlistApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/songs', {templateUrl: 'partials/playlist.html', controller: 'PlaylistCtrl'});
+  $routeProvider.otherwise({redirectTo: '/songs'});
 }]);

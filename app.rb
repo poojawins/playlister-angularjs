@@ -4,6 +4,7 @@ require 'sinatra/json'
 require './lib/playlister'
 require './lib/parser'
 
+module Playlist
 class PlayListerApp < Sinatra::Application
 
   configure do
@@ -45,4 +46,5 @@ class PlayListerApp < Sinatra::Application
     @song.to_json
   end
 
+end
 end
