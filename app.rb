@@ -9,7 +9,7 @@ module PlayLister
 class PlayListerApp < Sinatra::Application
   
   helpers Sinatra::JSON
-  
+
   my_parser = Parser.new
   my_parser.parse_directory
   
@@ -23,23 +23,23 @@ class PlayListerApp < Sinatra::Application
   end
   
   get '/artists' do
-    @artists = Artist.List
-    @artists.to_json
+    @artists = Artist.list
+    json @artists
   end
   
   # get '/artists/:artist' do
   #   @artist = Artist.find_by_name(params[:artist])
-  #   @artist.to_json
+  #   json @artist
   # end
 
   get '/genres' do
     @genres = Genre.list
-    @genres.to_json
+    json @genres
   end
 
   # get '/genres/:genre' do
   #   @genre = Genre.find_by_name(params[:genre])
-  #   @genre.to_json
+  #   json @genre
   # end
 
   get '/songs' do
@@ -49,7 +49,7 @@ class PlayListerApp < Sinatra::Application
 
   # get '/songs/:song' do
   #   @song = Song.find_by_name(params[:song])
-  #   @song.to_json
+  #   json @song
   # end
 
 end
