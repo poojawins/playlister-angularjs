@@ -36,6 +36,10 @@ class Artist
     end
   end
 
+  def to_json stuid
+    {'name' => self.name, 'genres' => self.genres}.to_json
+  end
+
   def genres
     songs.collect{|s| s.genre}.flatten.compact.uniq
   end

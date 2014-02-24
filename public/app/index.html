@@ -8,13 +8,15 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>
+
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+
 </head>
 
-<body ng-controller="PlayListerCtrl">
+<body>
   
   <ul class="menu">
     <li><a href="#/artists">Artists</a></li>
@@ -24,13 +26,7 @@
   
   <h1>PlayLister</h1>
   <div ng-view></div>
-  <ul>
-    <li ng-repeat="song in songs">
-      <h3>{{song.name}}</h3>
-      <p>{{song.artist.name}}</p>
-      <p>{{song.genre.name}}</p>
-    </li>
-  </ul>
+
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->

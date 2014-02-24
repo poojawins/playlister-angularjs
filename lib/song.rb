@@ -52,6 +52,10 @@ class Song
     @all
   end
 
+  def to_json stuid
+    {'name' => self.name, 'artist' => self.artist, 'genre' => self.genre}.to_json
+  end
+
   reset_all
 
 end

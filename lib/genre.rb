@@ -39,6 +39,10 @@ class Genre
     songs.collect{|s| s.artist}.uniq
   end
 
+  def to_json stuid
+    {'name' => self.name}.to_json
+  end
+
   def self.reset_all
     @all = []
   end

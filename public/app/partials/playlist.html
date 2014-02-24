@@ -1,11 +1,13 @@
 <div class="playlister-container">
   <div class="info">
-    <h1>PlayLister</h1>
-    <p>Song Info</p>
+    <h2>Song Info</h2>
+    <input type='text' ng-model='match'></input>
     <ul>
-      <li>Song: {{song.name}}</li>
-      <li>Artist: {{song.artist.name}}</li>
-      <li>Genre: {{song.genre.name}}</li>
+      <li ng-repeat="song in songs|filter:match">
+        <h3>{{song.name}}</h3>
+        <p>{{song.artist.name}}</p>
+        <p>{{song.genre.name}}</p>
+      </li>
     </ul>
   </div>
 
