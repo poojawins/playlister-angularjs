@@ -7,7 +7,7 @@
       <option value="artist.name">Artist</option>
       <option value="genre.name">Genre</option>
     </select>
-    
+
     <ul>
       <li ng-repeat="song in songs|filter:match|orderBy:orderProp" class="songs">
         <h3 class="searchforsong">{{song.name}}</h3>
