@@ -28,3 +28,22 @@
   content: "";
   padding: 0;
 }
+
+body {
+  font-size: 20px;
+  color: steelblue;
+  background-color: lightgray;
+  margin: 15px 25px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
