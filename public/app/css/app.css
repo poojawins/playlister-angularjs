@@ -1,6 +1,6 @@
 /* app css stylesheet */
 
-.menu {
+/*.menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
@@ -27,7 +27,7 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
-}
+}*/
 
 body {
   font-size: 20px;
@@ -35,6 +35,7 @@ body {
   background-color: lightgray;
   margin: 15px 25px;
 }
+
 h1 {
   font-size: 45px;
   text-align: center;
