@@ -14,6 +14,5 @@ playListerApp.controller("PlayListerCtrl", ["$scope", "$http", function($scope, 
        $scope.songs = data;
      });
     
-    //$scope.songs = $http.get("/songs");
   $scope.orderProp = 'name';
 }]); 

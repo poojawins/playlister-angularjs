@@ -1,18 +1,17 @@
 <div class="playlister-container">
   <div class="info">
-    <h2>Song Info</h2>
+    <h2>Songs</h2>
     <input type='text' ng-model='match'></input>
     <select ng-model="orderProp">
       <option value="name">Alphabetical</option>
       <option value="artist.name">Artist</option>
       <option value="genre.name">Genre</option>
     </select>
-
+    
     <ul>
       <li ng-repeat="song in songs|filter:match|orderBy:orderProp" class="songs">
         <h3 class="searchforsong">{{song.name}}</h3>
-        <p>{{song.artist.name}}</p>
-        <p>{{song.genre.name}}</p>
+        <p>{{song.artist.name}} - {{song.genre.name}}</p>
       </li>
     </ul>
   </div>
