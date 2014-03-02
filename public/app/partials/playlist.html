@@ -2,9 +2,15 @@
   <div class="info">
     <h2>Song Info</h2>
     <input type='text' ng-model='match'></input>
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="artist.name">Artist</option>
+      <option value="genre.name">Genre</option>
+    </select>
+
     <ul>
-      <li ng-repeat="song in songs|filter:match">
-        <h3>{{song.name}}</h3>
+      <li ng-repeat="song in songs|filter:match|orderBy:orderProp" class="songs">
+        <h3 class="searchforsong">{{song.name}}</h3>
         <p>{{song.artist.name}}</p>
         <p>{{song.genre.name}}</p>
       </li>
