@@ -2,7 +2,6 @@ require 'bundler'
 Bundler.require
 require 'sinatra/json'
 require 'json'
-require './lib/playlister.rb'
 require './lib/parser.rb'
 
 module PlayLister
